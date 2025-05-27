@@ -3,7 +3,6 @@ import { Features } from "@/components/sections/features";
 import { Stats } from "@/components/sections/stats";
 import { Testimonials } from "@/components/sections/testimonials";
 import { CTA } from "@/components/sections/cta";
-import { Footer } from "@/components/layout/footer";
 
 export default function HomePage() {
   return (
@@ -15,7 +14,6 @@ export default function HomePage() {
         <Testimonials />
         <CTA />
       </main>
-      <Footer />
     </div>
   );
 }

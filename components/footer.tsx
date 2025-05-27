@@ -48,7 +48,7 @@ export function Footer() {
             <div className="flex space-x-4 mt-6">
               <Link href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
                 <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
+                <span className="sr-only">X (Formerly Twitter)</span>
               </Link>
               <Link href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
                 <Github className="h-5 w-5" />
