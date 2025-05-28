@@ -193,51 +193,56 @@ export function Features() {
 
             {/* Feature Highlights */}
             <div className="space-y-6">
-              {[
-                {
-                  icon: Search,
-                  title: "Any data source, any format.",
-                  description:
-                    "Connect and analyze data from web, mobile, IoT, and enterprise systems with exceptional accuracy across all platforms.",
-                  color: "blue",
-                },
-                {
-                  icon: BarChart3,
-                  title: "Identify hidden patterns instantly.",
-                  description:
-                    "Discover insights in complex datasets even when traditional analytics miss critical trends and correlations.",
-                  color: "teal",
-                },
-                {
-                  icon: Zap,
-                  title: "Empower your data teams.",
-                  description:
-                    "Accelerate decision-making and reduce time-to-insight by providing self-service analytics for all skill levels.",
-                  color: "purple",
-                },
-              ].map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex items-start space-x-4 group cursor-pointer"
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    className={`flex-shrink-0 w-10 h-10 bg-${feature.color}-100 rounded-lg flex items-center justify-center mt-1 group-hover:shadow-lg transition-all duration-200`}
-                  >
-                    <feature.icon className={`w-5 h-5 text-${feature.color}-600`} />
-                  </motion.div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-600 group-hover:text-gray-700 transition-colors">{feature.description}</p>
-                  </div>
-                </motion.div>
-              ))}
+{[
+  {
+    icon: Search,
+    title: "Any data source, any format.",
+    description:
+      "Connect and analyze data from web, mobile, IoT, and enterprise systems with exceptional accuracy across all platforms.",
+    color: "blue",
+  },
+  {
+    icon: BarChart3,
+    title: "Identify hidden patterns instantly.",
+    description:
+      "Discover insights in complex datasets even when traditional analytics miss critical trends and correlations.",
+    color: "teal",
+  },
+  {
+    icon: Zap,
+    title: "Empower your data teams.",
+    description:
+      "Accelerate decision-making and reduce time-to-insight by providing self-service analytics for all skill levels.",
+    color: "purple",
+  },
+].map((feature, index) => {
+  const bgColorClass = feature.color === "blue" ? "bg-blue-100" : feature.color === "teal" ? "bg-teal-100" : "bg-purple-100";
+  const textColorClass = feature.color === "blue" ? "text-blue-600" : feature.color === "teal" ? "text-teal-600" : "text-purple-600";
+
+  return (
+    <motion.div
+      key={feature.title}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+      viewport={{ once: true }}
+      className="flex items-start space-x-4 group cursor-pointer"
+    >
+      <motion.div
+        whileHover={{ scale: 1.1, rotate: 5 }}
+        className={`${bgColorClass} flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center mt-1 group-hover:shadow-lg transition-all duration-200`}
+      >
+        <feature.icon className={`${textColorClass} w-5 h-5`} />
+      </motion.div>
+      <div>
+        <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+          {feature.title}
+        </h3>
+        <p className="text-gray-600 group-hover:text-gray-700 transition-colors">{feature.description}</p>
+      </div>
+    </motion.div>
+  );
+})}
             </div>
           </motion.div>
         </div>
