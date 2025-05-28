@@ -6,7 +6,8 @@ import { Testimonials } from "@/components/sections/testimonials";
 import { CTA } from "@/components/sections/cta";
 import { SpotterModal } from "@/components/ui/spotter-modal";
 import { useState } from "react";
-
+import { UseCases } from "@/components/sections/use-case";
+import { DemoShowcase } from "@/components/sections/demo-showcase";
 export default function HomePage() {
   const [modalOpen, setModalOpen] = useState(false);
   return (
@@ -30,12 +31,16 @@ export default function HomePage() {
         </div>
       </SpotterModal>
       <main>
+        <DemoShowcase />
         <Hero onOpenModal={() => setModalOpen(true)} />
         <Features />
+        
+        <UseCases />
         <Stats />
         <Testimonials />
         <CTA />
       </main>
+      
     </div>
   );
 }

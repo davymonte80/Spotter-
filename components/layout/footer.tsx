@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { Brain, Github, Twitter, Linkedin, Mail } from "lucide-react"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { Brain, Github, Twitter, Linkedin, Mail } from "lucide-react";
 
 const footerLinks = {
   product: [
@@ -29,7 +29,7 @@ const footerLinks = {
     { name: "Security", href: "#security" },
     { name: "Cookies", href: "#cookies" },
   ],
-}
+};
 
 export function Footer() {
   return (
@@ -51,8 +51,9 @@ export function Footer() {
                 <span className="text-xl font-bold">Spotter</span>
               </Link>
               <p className="text-gray-400 text-sm leading-relaxed max-w-sm mb-6">
-                AI-powered analytics platform that transforms data into actionable insights. Spot opportunities and make
-                data-driven decisions with confidence.
+                AI-powered analytics platform that transforms data into
+                actionable insights. Spot opportunities and make data-driven
+                decisions with confidence.
               </p>
               <div className="flex space-x-4">
                 {[
@@ -83,35 +84,42 @@ export function Footer() {
           </div>
 
           {/* Links */}
-          {Object.entries(footerLinks).map(([category, links], categoryIndex) => (
-            <motion.div
-              key={category}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-sm font-semibold text-white mb-4 capitalize">{category}</h3>
-              <ul className="space-y-3">
-                {links.map((link, linkIndex) => (
-                  <motion.li
-                    key={link.name}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: categoryIndex * 0.1 + linkIndex * 0.05 }}
-                    viewport={{ once: true }}
-                  >
-                    <Link
-                      href={link.href}
-                      className="text-sm text-gray-400 hover:text-white transition-colors hover:underline"
+          {Object.entries(footerLinks).map(
+            ([category, links], categoryIndex) => (
+              <motion.div
+                key={category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-sm font-semibold text-white mb-4 capitalize">
+                  {category}
+                </h3>
+                <ul className="space-y-3">
+                  {links.map((link, linkIndex) => (
+                    <motion.li
+                      key={link.name}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{
+                        duration: 0.4,
+                        delay: categoryIndex * 0.1 + linkIndex * 0.05,
+                      }}
+                      viewport={{ once: true }}
                     >
-                      {link.name}
-                    </Link>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+                      <Link
+                        href={link.href}
+                        className="text-sm text-gray-400 hover:text-white transition-colors hover:underline"
+                      >
+                        {link.name}
+                      </Link>
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
+            )
+          )}
         </div>
 
         <motion.div
@@ -121,12 +129,15 @@ export function Footer() {
           viewport={{ once: true }}
           className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center"
         >
-          <p className="text-sm text-gray-400">© 2024 Spotter.ai. All rights reserved.</p>
+          <p className="text-sm text-gray-400">
+            © 2024 Spotter.ai. All rights reserved.
+          </p>
           <p className="text-sm text-gray-400 mt-4 sm:mt-0">
-            Made with <span className="text-red-400">❤️</span> for data-driven teams
+            Made with <span className="text-red-400">❤️</span> for data-driven
+            teams by David Monte
           </p>
         </motion.div>
       </div>
     </footer>
-  )
+  );
 }
