@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Spotter.ai 🔍
 
-## Getting Started
+> AI-Powered Analytics Platform transforming data into actionable insights
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **AI-powered analytics dashboard**
+- **Interactive data visualization**
+- **Custom insights and reporting**
+- **Responsive design** with Tailwind CSS
+- **Modern UI** with animations and glass effects
+
+## 🛠️ Tech Stack
+
+- **[Next.js 14](https://nextjs.org/)** - React framework
+- **[React 19](https://reactjs.org/)** - UI library
+- **[Tailwind CSS](https://tailwindcss.com/)** - Styling
+- **[Framer Motion](https://www.framer.com/motion/)** - Animations
+- **[Radix UI](https://www.radix-ui.com/)** - Accessible component primitives
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (version 16 or later)
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/spotter.git
+   cd spotter
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## 📁 Project Structure
+
+```
+spotter/
+├── app/             # Next.js App Router pages and layouts
+├── components/      # Reusable React components
+│   ├── sections/    # Main page sections
+│   ├── layout/      # Layout components
+│   └── ui/          # UI components
+├── lib/             # Utility functions and shared code
+└── public/          # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Building and Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+### Run Production Build Locally
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The application is configured for easy deployment on [Vercel](https://vercel.com). Connect your repository to Vercel for automatic deployments on push.
 
-## Deploy on Vercel
+## 🎨 Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Global styling can be modified in `globals.css`
+- Main page content is located in `page.tsx`
+- Site metadata and layout are defined in `layout.tsx`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+
+MIT
+
+## 👨‍💻 Author
+
+David Monte
