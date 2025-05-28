@@ -1,6 +1,6 @@
 # Spotter.ai 🔍
 
-> AI-Powered Analytics Platform transforming data into actionable insights
+> AI-Powered Analytics Platform transforming data into actionable insights inspired by fingerprint.com
 
 ## ✨ Features
 
@@ -72,7 +72,7 @@ npm run build
 ### Run Production Build Locally
 
 ```bash
-npm run start
+npm run dev
 ```
 
 ### Deployment
