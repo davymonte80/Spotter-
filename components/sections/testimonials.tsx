@@ -11,7 +11,7 @@ const testimonials = [
     content:
       "Spotter.ai transformed how we approach data analysis. The insights are incredibly accurate and actionable.",
     rating: 5,
-    avatar: "/placeholder.svg?height=60&width=60",
+    avatar: "/sarah.jpg?height=60&width=60",
   },
   {
     name: "Michael Rodriguez",
@@ -20,7 +20,7 @@ const testimonials = [
     content:
       "The AI-powered predictions have helped us identify opportunities we would have missed with traditional tools.",
     rating: 5,
-    avatar: "/placeholder.svg?height=60&width=60",
+    avatar: "/smichael.jpg?height=60&width=60",
   },
   {
     name: "Emily Johnson",
@@ -29,7 +29,7 @@ const testimonials = [
     content:
       "Implementation was seamless, and the ROI was evident within the first month. Highly recommended!",
     rating: 5,
-    avatar: "/placeholder.svg?height=60&width=60",
+    avatar: "/wmily.jpg?height=60&width=60",
   },
 ];
 
