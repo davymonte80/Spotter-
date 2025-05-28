@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles } from "lucide-react"
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export function CTA() {
   return (
@@ -15,7 +15,7 @@ export function CTA() {
         style={{ animationDelay: "2s" }}
       />
 
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-customTeal to-darkNavy">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +40,8 @@ export function CTA() {
             viewport={{ once: true }}
             className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6"
           >
-            Ready to transform your <span className="gradient-text">data strategy</span>?
+            Ready to transform your{" "}
+            <span className="gradient-text">data strategy</span>?
           </motion.h2>
 
           <motion.p
@@ -50,8 +51,9 @@ export function CTA() {
             viewport={{ once: true }}
             className="text-lg lg:text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            Join thousands of data-driven teams who trust Spotter.ai to deliver actionable insights. Start your free
-            trial today and see the difference AI-powered analytics can make.
+            Join thousands of data-driven teams who trust Spotter.ai to deliver
+            actionable insights. Start your free trial today and see the
+            difference AI-powered analytics can make.
           </motion.p>
 
           <motion.div
@@ -93,5 +95,5 @@ export function CTA() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

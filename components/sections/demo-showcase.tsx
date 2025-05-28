@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { MapPin, Globe } from "lucide-react"
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { MapPin, Globe } from "lucide-react";
 
 export function DemoShowcase() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-r from-customTeal to-darkNavy relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -21,8 +21,9 @@ export function DemoShowcase() {
             Analyze <span className="gradient-text">Every Data Point</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Stop data silos, detect anomalies, or optimize performance. Analyze patterns and trends with
-            industry-leading accuracy - even in complex datasets.
+            Stop data silos, detect anomalies, or optimize performance. Analyze
+            patterns and trends with industry-leading accuracy - even in complex
+            datasets.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Button className="gradient-bg hover:opacity-90 text-white px-8 py-3 text-lg font-semibold">
@@ -48,8 +49,13 @@ export function DemoShowcase() {
             className="glass-effect rounded-xl p-6 shadow-lg"
           >
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-semibold text-gray-900">Analytics Console</h3>
-              <Badge variant="secondary" className="bg-green-100 text-green-700">
+              <h3 className="text-lg font-semibold text-gray-900">
+                Analytics Console
+              </h3>
+              <Badge
+                variant="secondary"
+                className="bg-green-100 text-green-700"
+              >
                 I&apos;M A DATA ANALYST
               </Badge>
             </div>
@@ -57,7 +63,8 @@ export function DemoShowcase() {
             <div className="bg-gray-900 rounded-lg p-4 text-green-400 font-mono text-sm">
               <div className="mb-2">Welcome to Spotter.ai,</div>
               <div className="mb-2">
-                Dataset: <span className="text-blue-400">e-commerce_analytics_2024</span>
+                Dataset:{" "}
+                <span className="text-blue-400">e-commerce_analytics_2024</span>
               </div>
               <div className="mb-4">
                 It&apos;s great to have you here.
@@ -69,10 +76,15 @@ export function DemoShowcase() {
                 <br />
                 <span className="text-yellow-400">E-commerce, Global</span>
                 <br />
-                What a comprehensive dataset! <span className="text-blue-400">Nice!</span>
+                What a comprehensive dataset!{" "}
+                <span className="text-blue-400">Nice!</span>
               </div>
               <div className="mb-4">
-                Curious to explore more? <span className="text-orange-400 underline cursor-pointer">Sign up</span> for a
+                Curious to explore more?{" "}
+                <span className="text-orange-400 underline cursor-pointer">
+                  Sign up
+                </span>{" "}
+                for a
                 <br />
                 free trial and unlock all the features
                 <br />
@@ -92,7 +104,8 @@ export function DemoShowcase() {
           >
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-lg font-semibold text-gray-900">
-                Hello, dataset ID <span className="text-blue-600">EC2024Q4Br33nyk00SY</span>
+                Hello, dataset ID{" "}
+                <span className="text-blue-600">EC2024Q4Br33nyk00SY</span>
               </h3>
             </div>
 
@@ -118,13 +131,17 @@ export function DemoShowcase() {
 
             {/* Analysis History */}
             <div className="mb-6">
-              <div className="text-xs text-gray-500 mb-2">YOUR ANALYSIS HISTORY</div>
+              <div className="text-xs text-gray-500 mb-2">
+                YOUR ANALYSIS HISTORY
+              </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                   <span className="text-sm">Now</span>
                 </div>
-                <div className="text-sm text-gray-600">Global E-commerce Analysis</div>
+                <div className="text-sm text-gray-600">
+                  Global E-commerce Analysis
+                </div>
               </div>
             </div>
 
@@ -132,17 +149,25 @@ export function DemoShowcase() {
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-600">Data Source</span>
-                <span className="text-sm font-semibold">Multi-platform API</span>
+                <span className="text-sm font-semibold">
+                  Multi-platform API
+                </span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-600">Processing Mode</span>
-                <Badge variant="secondary" className="bg-green-100 text-green-700">
+                <Badge
+                  variant="secondary"
+                  className="bg-green-100 text-green-700"
+                >
                   Real-time
                 </Badge>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-600">AI Model</span>
-                <Badge variant="secondary" className="bg-blue-100 text-blue-700">
+                <Badge
+                  variant="secondary"
+                  className="bg-blue-100 text-blue-700"
+                >
                   Advanced Analytics
                 </Badge>
               </div>
@@ -156,7 +181,9 @@ export function DemoShowcase() {
               </div>
               <div className="relative h-20 bg-gradient-to-r from-blue-100 to-teal-100 rounded flex items-center justify-center">
                 <MapPin className="w-6 h-6 text-blue-600" />
-                <span className="ml-2 text-sm font-medium text-gray-700">Global Coverage</span>
+                <span className="ml-2 text-sm font-medium text-gray-700">
+                  Global Coverage
+                </span>
               </div>
             </div>
           </motion.div>
@@ -170,7 +197,9 @@ export function DemoShowcase() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-sm text-gray-500 mb-8 tracking-wider">TRUSTED BY 2000+ DATA TEAMS OF ALL SIZES</p>
+          <p className="text-sm text-gray-500 mb-8 tracking-wider">
+            TRUSTED BY 2000+ DATA TEAMS OF ALL SIZES
+          </p>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
             {[
               "Microsoft",
@@ -199,5 +228,5 @@ export function DemoShowcase() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
