@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BarChart3, TrendingUp, Zap, Play } from "lucide-react";
 
-export function Hero() {
+export function Hero({ onOpenModal }: { onOpenModal?: () => void }) {
   return (
     <section className="relative overflow-hidden bg-white">
       {/* Background Elements */}
@@ -63,6 +63,7 @@ export function Hero() {
                   <Button
                     size="lg"
                     className="gradient-bg hover:opacity-90 text-white px-8 py-3 text-lg font-semibold shadow-lg"
+                    onClick={onOpenModal}
                   >
                     Start Free Trial
                     <ArrowRight className="ml-2 h-5 w-5" />
